@@ -1,0 +1,426 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="/css/dashboard.css">
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+</head>
+<body>
+
+<div class="dashboard-background">
+    <div class="container_new">
+        <div class="dashboard">
+            <div class="dashboard-menu">
+                <div class="img-admin">
+                    <img src="https://wompampsupport.azureedge.net/fetchimage?siteId=7575&v=2&jpgQuality=100&width=700&url=https%3A%2F%2Fi.kym-cdn.com%2Fphotos%2Fimages%2Fnewsfeed%2F002%2F205%2F309%2F1d3.jpg" alt="" class="s">
+                </div>
+                <div class="list-menu-item">
+                    <a href="/admin/products" class="link-item-menu">
+                        <div class="item-menu">
+                            Products
+                        </div>
+                    </a>
+                    <a href="/admin/theme" class="link-item-menu">
+                        <div class="item-menu">
+                            Themes
+                        </div>
+                    </a>
+                     <a href="/admin/category" class="link-item-menu">
+                        <div class="item-menu">
+                            Categories
+                        </div>
+                    </a>
+                    <a href="/admin/order" class="link-item-menu">
+                        <div class="item-menu">
+                            Order
+                        </div>
+                    </a>
+                    <a href="/admin/account" class="link-item-menu">
+                        <div class="item-menu">
+                            Accounts
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="wrap-recommend">
+                <div class="recommend">
+                    <span class="rcmd-header">Welcome to LEGO Dashboard</span>
+                    <h2 class="rcmd-header">Order</h2>
+                    <div class="wrap-list-product-recommended grid_row">
+
+                        <div class="product-item wating-background">
+                            <div class="first-part">
+                                <span class="count">{{waiting}}</span>
+                                <h5 class="type-count-header">Waiting</h5>
+                            </div>
+                            <div class="second-part">
+                                <img src="/img/dashboard/waiting.jpg" alt="" srcset="">
+                            </div>
+                        </div>
+
+                        <div class="product-item delivery-background">
+                            <div class="first-part">
+                                <span class="count">{{delivery}}</span>
+                                <h5 class="type-count-header">Delivery</h5>
+                            </div>
+                            <div class="second-part">
+                                <img src="/img/dashboard/delivery.jpg" alt="" srcset="">
+                            </div>
+                        </div>
+
+                        <div class="product-item confirmed-background">
+                            <div class="first-part">
+                                <span class="count">{{confirmed}}</span>
+                                <h5 class="type-count-header">Completed</h5>
+                            </div>
+                            <div class="second-part">
+                                <img src="/img/dashboard/confirmed.jpg" alt="" srcset="">
+                            </div>
+                        </div>
+
+                        <div class="product-item canceled-background">
+                            <div class="first-part">
+                                <span class="count">{{canceled}}</span>
+                                <h5 class="type-count-header">Canceled</h5>
+                            </div>
+                            <div class="second-part">
+                                <img src="/img/dashboard/canceled.jpg" alt="" srcset="">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <h2 class="rcmd-header">User</h2>
+                <div class="recommend">
+                    <div class="wrap-list-product-recommended grid_row summary-total">
+
+                        <div class="product-item user-tag-infor">
+                            <span class="head-user-tag-infor">
+                                Total User
+                            </span>
+                            <div class="wrap-statistic-on-total total-user">
+                                {{user}}
+                            </div>
+                        </div>
+
+                        <div class="product-item user-tag-infor">
+                            <span class="head-user-tag-infor">
+                                Order Completed Rate
+                            </span>
+                            <div class="wrap-statistic-on-total comeback-buying">
+                                {{orderratting}}%
+                            </div>
+                        </div>
+
+                        <div class="product-item user-tag-infor">
+                            <span class="head-user-tag-infor">
+                                Total Order
+                            </span>
+                            <div class="wrap-statistic-on-total total-order">
+                                {{order}}
+                            </div>
+                        </div>
+
+                        <div class="product-item user-tag-infor">
+                            <span class="head-user-tag-infor">
+                                Total Admin
+                            </span>
+                            <div class="wrap-statistic-on-total">
+                                {{admin}}
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="big-chart">
+                    <h2 class="rcmd-header">Stock Information</h2>
+                    <div class="wrap-the-lastest grid_row">
+                        <div class="lastest-item chart">
+                            <div id="myChart" style="width:100%; max-width:600px; height:500px;"></div>
+                        </div>
+                        <div class="lastest-item chart">
+                            <div id="circle" style="width:100%; max-width:600px; height:500px;"></div>
+                        </div>
+                    </div>
+                </div>
+                {{!-- <div class="statistic-basic-number">
+                    <div class="three-col">
+                        <div class="number-item">
+1
+                        </div>
+                    </div>
+                    <div class="three-col">
+                        <div class="number-item">
+1
+                        </div>
+                    </div>
+                    <div class="three-col">
+                        <div class="number-item">
+1
+                        </div>
+                    </div>
+                </div> --}}
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="wrap-footer">
+    <footer class=" text-lg-start">
+    <!-- Grid container -->
+    <div class="container p-5">
+        <!--Grid row-->
+        <div class="row">
+        <!--Grid column-->
+        <div class="col wrap-link">
+            <h5 class="text-uppercase">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/2/24/LEGO_logo.svg" alt="" style="width: 100px; height: 100px;">
+            </h5>
+            <a href="" class="link-location-footer">
+                <div class="location-footer">
+                    <i class="fa-solid fa-location-dot"></i> 
+                    
+                    <span>NoWhere</span>
+
+                </div>
+            </a>
+
+            <div class="list-link-footer">
+                <ul class="list-link">
+                    <li class="link-item-footer">
+                        <a href="">Gift Cards</a>
+                    </li>
+                    <li class="link-item-footer">
+                        <a href="">Lego Catalogs</a>
+                    </li>
+                    <li class="link-item-footer">
+                        <a href="">Find a LEGO store</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--Grid column-->
+
+        <div class="col wrap-link">
+            <span class="text-uppercase head-link-footer-card">
+                ABOUT US
+            </span>
+
+            <div class="list-link-footer">
+                <ul class="list-link">
+                    <li class="link-item-footer">
+                        <a href="">About the LEGO Group</a>
+                    </li>
+                    <li class="link-item-footer">
+                        <a href="">LEGO® News</a>
+                    </li>
+                    <li class="link-item-footer">
+                        <a href="">Sustainability</a>
+                    </li>
+                    <li class="link-item-footer">
+                        <a href="">Supply Chain Transparency Statement</a>
+                    </li>
+                    <li class="link-item-footer">
+                        <a href="">LEGO Product Certification</a>
+                    </li>
+                    <li class="link-item-footer">
+                        <a href="">LEGO Jobs</a>
+                    </li>
+                    <li class="link-item-footer">
+                        <a href="">LEGO Compliance Line</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col wrap-link">
+            <span class="text-uppercase head-link-footer-card">
+                SUPPORT
+            </span>
+
+            <div class="list-link-footer">
+                <ul class="list-link">
+                    <li class="link-item-footer">
+                        <a href="">Contact Us</a>
+                    </li>
+                    <li class="link-item-footer">
+                        <a href="">Find Building Instructions</a>
+                    </li>
+                    <li class="link-item-footer">
+                        <a href="">Replacement Parts</a>
+                    </li>
+                    <li class="link-item-footer">
+                        <a href="">Shipping and Returns</a>
+                    </li>
+                    <li class="link-item-footer">
+                        <a href="">Payment Method</a>
+                    </li>
+                    <li class="link-item-footer">
+                        <a href="">Terms & Condition</a>
+                    </li>
+                    <li class="link-item-footer">
+                        <a href="">Product Recalls</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col wrap-link">
+            <span class="text-uppercase head-link-footer-card">
+                ATTRACTIONS
+            </span>
+
+            <div class="list-link-footer">
+                <ul class="list-link">
+                    <li class="link-item-footer">
+                        <a href="">LEGO® House</a>
+                    </li>
+                    <li class="link-item-footer">
+                        <a href="">LEGOLAND® Parks</a>
+                    </li>
+                    <li class="link-item-footer">
+                        <a href="">LEGOLAND Discovery Centers</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col wrap-link">
+            <span class="text-uppercase head-link-footer-card">
+                MORE FROM US
+            </span>
+
+            <div class="list-link-footer">
+                <ul class="list-link">
+                    <li class="link-item-footer">
+                        <a href="">LEGO® LIFE</a>
+                    </li>
+                    <li class="link-item-footer">
+                        <a href="">LEGO Education</a>
+                    </li>
+                    <li class="link-item-footer">
+                        <a href="">LEGO Ideas</a>
+                    </li>
+                    <li class="link-item-footer">
+                        <a href="">LEGO Foundation</a>
+                    </li>
+                    <li class="link-item-footer">
+                        <a href="">Affiliate Program</a>
+                    </li>
+                    <li class="link-item-footer">
+                        <a href="">Student Offers</a>
+                    </li>
+                    <li class="link-item-footer">
+                        <a href="">LEGO® Braille Bricks</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--Grid column-->
+        </div>
+        <!--Grid row-->
+    </div>
+    <div class="container p-5">
+        <div class="wrap-contact">
+            <div class="form-contact">
+                <span class="head-form-contact">SUBSCRIBE TO LEGO® SHOP EMAILS</span>
+                <form action="">
+                    <input type="text" placeholder="Your email address">
+                    <span class="angel-right"><i class="fa-solid fa-angle-right"></i></span>
+                </form>
+            </div>
+            <div class="social-contact">
+                <span class="head-form-contact">FOLLOW US</span>
+                <div class="list-social-contact-icon">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container p-5">
+        <div class="wrap-last-footer">
+            <div class="wrap-list-link-lience">
+                <a href="" class="link-lience">Privacy Policy</a>
+                <a href="" class="link-lience">Cookies</a>
+                <a href="" class="link-lience">Legal Notice</a>
+                <a href="" class="link-lience">Terms of Use</a>
+                <a href="" class="link-lience">Digital Wellbeing</a>
+                <a href="" class="link-lience">Accessibility</a>
+                <a href="" class="link-lience">Cookie Settings</a>
+                <a href="" class="link-lience">Do Not Sell My Personal Information</a>
+
+            </div>
+            <div class="wrap-p">
+                LEGO System A/S, DK-7190 Billund, Denmark. Must be 18 years or older to purchase online. LEGO, the LEGO logo, the Minifigure, DUPLO, LEGENDS OF CHIMA, NINJAGO, BIONICLE, MINDSTORMS and MIXELS are trademarks and copyrights of the LEGO Group. ©2022 The LEGO Group. All rights reserved. Use of this site signifies your agreement to the terms of use.
+            </div>
+        </div>
+    </div>
+
+    <!-- Grid container -->
+
+    </footer>
+</div>
+<script id="entry-template" type="text/x-handlebars-template">
+  <div class="entry">
+    {{#each products}}
+    <h1>{{this.name}}</h1>
+    {{/each}}
+    <div class="body">
+      {{body}}
+    </div>
+  </div>
+</script>
+<script>
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+
+function drawChart() {
+    var dataArray = [
+        ['Product', 'Quantity'],
+];
+
+{{#each products}}
+dataArray.push(['{{this.name}}', {{this.quantity}}])
+{{/each}}
+var data = google.visualization.arrayToDataTable(dataArray);
+
+var options = {
+  title:'World Wide LEGO Production'
+};
+
+var chart = new google.visualization.BarChart(document.getElementById('myChart'));
+  chart.draw(data, options);
+}
+
+
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(circle);
+
+function circle() {
+var data = google.visualization.arrayToDataTable([
+  ['Contry', 'Mhl'],
+  ['Italy',54.8],
+  ['France',48.6],
+  ['Spain',44.4],
+  ['USA',23.9],
+  ['Argentina',14.5]
+]);
+
+var options = {
+  title:'World Wide Wine Production'
+};
+
+var chart = new google.visualization.PieChart(document.getElementById('circle'));
+  chart.draw(data, options);
+}
+</script>
+
+
+</body>
+</html>

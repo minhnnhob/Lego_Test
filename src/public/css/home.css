@@ -1,0 +1,170 @@
+.slider{
+    position: relative;
+}
+.wrap-slider>img{
+    width: 100%;
+    height: 100%;
+}
+.slider-header{
+    font-size: 30px;
+}
+.slider-des{
+    margin-bottom: 18px;
+}
+.slider-content>a{
+    margin-top: 10px;
+    text-decoration: none;
+}
+.wrap-slider-content{
+    position: absolute;
+    width: 40%;
+    display: block;
+    bottom: 25%;
+    left: 25px;
+}
+.wrap-slider-content>img{
+    width: 38%;
+}
+.link-slider{
+    padding: 15px;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    font-weight: 500;
+}
+.link-slider:hover{
+    background-color: white;
+    color: black;
+}
+.link-slider>i{
+    margin-left: 5px;
+}
+
+/*Category*/
+.category{
+    margin: 20px 0px;
+}
+.wrap-category{
+    display: flex;
+    justify-content: center;
+}
+.wrap-category>.category-item{
+    padding: 10px 15px;
+}
+.category-item{
+    text-align: center;
+}
+.category-header{
+    font-size: 12px;
+    text-align: center;
+    padding-top: 5px;
+}
+.category-header>a{
+    color: black;
+}
+.category-header>a:hover{
+    color: rgb(0, 153, 255);
+}
+
+/*Recommend Section*/
+.grid_row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.rcmd-header{
+    font-size: 25px;
+}
+.wrap-list-product-recommended{
+    width: 100%;
+}
+.product-item{
+    width: 25%;
+    padding: 15px;
+}
+.product-item>a>img{
+    width: 100%;
+    border: 1px solid #ccc;
+    object-fit: contain;
+    height: 250px;
+}
+.product-des{
+    margin-top: 5px;
+}
+.product-des>a{
+    text-decoration: none;
+    color: black;
+}
+.product-name>a{
+    color: black;
+    font-weight: 500;
+}
+.product-price{
+    margin-top: 15px;
+    font-weight: 600;
+}
+.watch-product{
+    width: 100%;
+    text-align: center;
+    background-color: rgb(253, 128, 36);
+    padding: 15px 0px;
+    border-radius: 5px;
+    border: 2px solid rgb(253, 128, 36);
+    font-weight: 500;
+}
+.watch-product:hover{
+    border: 2px solid rgb(253, 128, 36);
+    background-color: white;
+}
+/*HELP SECTION*/
+.help{
+    display: flex;
+    background-color: rgb(230, 243, 255);
+    border-radius: 3.3125rem;
+    padding: 10px;
+    margin: 20px 10px;
+}
+.help-content{
+    margin: auto 10px;
+}
+/*TREND SECTION*/
+.trend-img>a>img{
+    border: none;
+}
+.trend-des{
+    margin-top: 15px;
+}
+.trend-name{
+    font-weight: 500;
+    font-size: 15px;
+    text-align: center;
+}
+.trend-desc{
+    margin-top: 15px;
+    text-align: justify;
+}
+/*THE LASTEST SECTION*/
+.lastest-item{
+    position: relative;
+    width: 50%;
+    padding: 15px;
+}
+.lastest-item>img{
+    width: 100%;
+}
+.lastest-item-content{
+    position: absolute;
+    top: 40px;
+    left: 75px;
+    text-align: center;
+}
+.lastest-item-content > span{
+    font-size: 25px;
+    font-weight: 500;
+}
+.lastest-item-content > p{
+    margin-top: 15px;
+    font-size: 12px;
+}
+.white{
+    color: white;
+}

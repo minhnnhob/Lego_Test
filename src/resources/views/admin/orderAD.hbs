@@ -1,0 +1,68 @@
+<div class="container-fluid">
+
+    <div class="link-product">
+        {{!-- <a href="/" class="link-to-item">Home</a>
+        <i class="fa-solid fa-angle-right"></i>
+        <a href="/" class="link-to-item">Account Overview</a> --}}
+    </div>
+    <div class="row">
+        <div class="col-3 mb-5 pb-5" style="margin-left: 15px;">
+            <div class="list-group " id="list-tab" role="tablist">
+            {{!-- <a class="rounded-0 list-group-item list-group-item-action"  href="/detail" >Personal and Address Details</a> --}}
+            <a class="rounded-0 list-group-item list-group-item-action active" id="list-profile-list"  href="/orderDetail" >View All Orders</a>
+             {{!-- <a class="rounded-0 list-group-item list-group-item-action"  href="/changePassword" >Change Password</a> --}}
+            {{!-- <a class="rounded-0 list-group-item list-group-item-action" href="/logout" role="tab" >Lougout</a> --}}
+            </div>
+        </div>
+        {{!--  --}}
+    
+            <div class="my-bag col-8 ">
+            {{#each orders}}
+                    
+                   <div class="my-bag-list">
+                       
+                            <div class="my-bag-item">
+                                <div class="my-bag-item-img">
+                                    <div>Order number: {{oid}}</div>
+                                   <a href="/order/{{_id}}" class="my-bag-item-product-price">{{customerName}}</a> 
+                                   {{!-- <div class="my-bag-item-product-price"></div> --}}
+                                    {{!-- <input type="hidden" name="orderId" value="{{_id}}"> --}}
+                                </div>
+                                <div class="my-bag-infor">
+                                  <div>
+                                     <label for="inputEmail4" class="form-label">Email: </label>
+                                   <span style="margin-left: 15px;">{{email}}</span>
+
+                                  </div>
+                                  <div>
+                                    
+                                     <label for="inputEmail4" class="form-label">Phone: </label>
+                                   <span style="margin-left: 15px;">{{phonenumber}}</span>
+
+                                  </div>
+                                </div>
+                                                            
+                                    <label for="inputEmail4" class="form-label">Status: </label>
+                                   <span style="margin-left: 15px;margin-right: 35px;color:#FFC93C;">{{status}}
+
+                                    
+                                   </span>
+                                <div class="my-bag-menu">
+                                    <a class="delete-btn" href="/admin/order/compeleted/{{_id}}" name="Compeleted">Compeleted</a>
+                                    <a class="update-btn" href="/admin/order/delivery/{{_id}}">Delivery</a>
+                                    
+                                </div> 
+                            </div>
+                            
+                        
+                </div>
+            {{/each}}
+           
+        {{!--  --}}
+       </div>
+     </div>
+       
+    </div>
+    
+</div>
+

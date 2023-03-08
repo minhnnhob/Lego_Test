@@ -1,0 +1,41 @@
+.register-header,
+.register-already-have-account{
+    text-align: center;
+}
+.register-header{
+    font-size: 30px;
+    font-weight: 600;
+    padding: 15px;
+}
+.register-already-have-account{
+    padding: 5px;
+}
+.register-form{
+    display: flex;
+    justify-content: center;
+}
+.register-input>input{
+    width: 500px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+}
+.register-input-tag{
+    display: block;
+    font-size: 14px;
+    padding: 5px 0px;
+}
+.wrap-register-img{
+    display: block;
+    text-align: center;
+}
+.wrap-register-img>img{
+    object-fit: contain;
+    width: 100%;
+    height: 400px;
+}
+.register-input-submit>button{
+    background-color: #006cb7;
+    color: white;
+    font-weight: 600;
+}

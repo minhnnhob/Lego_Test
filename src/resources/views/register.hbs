@@ -1,0 +1,38 @@
+<div class="register">
+    <div class="container">
+        <div class="register-header">
+            Create your adult LEGO® Account
+        </div>
+        <div class="register-already-have-account">
+            <span class="have-account">Already have an account?</span>
+            <a href="/auth/login" class="link-login">Log in</a>
+        </div>
+        <div class="wrap-register-img">
+            <img src="/img/register-img.png" alt="" srcset="">
+        </div>
+        <div class="register-form">
+            <form action="/auth/register" method="post">
+                <span class="message">{{message}}</span>
+                <div class="register-input">
+                    <span class="register-input-tag">Your email address</span>
+                    <input type="text" name="email" id="">
+                </div>
+                <div class="register-input">
+                    <span class="register-input-tag">Your username address</span>
+                    <input type="text" name="username" id="">
+                </div>
+                <div class="register-input">
+                    <span class="register-input-tag">Your password</span>
+                    <input type="text" name="password" id="">
+                </div>
+                <div class="register-input">
+                    <span class="register-input-tag">Confirm your password</span>
+                    <input type="text" name="passwordConfirm" id="">
+                </div>
+                <div class="register-input-submit">
+                    <button type="submit" class="btn btn-color px-5 mb-5 w-100">Sign Up</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

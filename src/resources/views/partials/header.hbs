@@ -1,0 +1,69 @@
+{{#if admin}}
+<div class="header">
+    <div class="container_new">
+        <nav class="navbar navbar-expand-lg navbar-light"> 
+
+                <a class="navbar-brand" href="#">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/24/LEGO_logo.svg" alt="" style="width: 55px; height: 55px;">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item active link-header">
+                        <a class="link-hover" href="/admin">Admin</a>
+                    </li>
+                    </ul>
+                </div>
+
+        </nav>
+    </div>
+</div>
+
+{{else}}
+<div class="header">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light"> 
+
+                <a class="navbar-brand" href="#">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/24/LEGO_logo.svg" alt="" style="width: 55px; height: 55px;">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item active link-header">
+                        <a class="link-hover" href="/">SHOP</a>
+                    </li>
+                    <li class="nav-item active link-header">
+                        <a class="link-hover" href="/">DISCOVER</a>
+                    </li>
+                    <li class="nav-item active link-header">
+                        <a class="link-hover" href="/">HELP</a>
+                    </li>
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+
+                    </form>
+                    <div class="cart-icon">
+                        <a class="cart-link icon-header" href="/cart"><i class="fa-solid fa-cart-shopping"></i></a>
+                    </div>
+                    
+                    <div class="user-icon">
+                        <a href="/detail" class="user-link icon-header"><i class="fa-solid fa-user"></i></a>
+                    </div>
+                    
+                </div>
+
+        </nav>
+    </div>
+</div>
+{{/if}}
+
+

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+<div class="container">
+    <form action="/admin/products/search" method="GET">
+      <input type="text" name="searchName" id="ProductSearch" placeholder="Search">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+    {{!-- <form(action="/search", method="GET")>
+    <input(name="id", type="text", placeholder="id")>
+    <button type="submit"> Search</button>
+    </form> --}}
+
+
+     <h1 style="text-align:center">PRODUCTS LIST</h1>
+     <a href="/admin/products/add" class="btn btn-primary">Add product</a>
+     <table class="table">
+        <thead>
+        <tr>
+            <th>name</th>
+            <th>price</th>
+            <th>quantity</th>
+            <th>Image</th>
+            <th>rating</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+    <tbody>
+    {{#each products}}  
+    <tr>    
+    <td>{{this.name}}</td>
+    <td>{{this.price}} $ </td>
+    <td>{{this.quantity}}</td>
+    <td><img src="/img/products/{{this.img1}}" style="width: 100%; object-fit: contain; height: 100px;"></td>
+    
+    <td>{{this.ratting}}</td>
+    <td><a href="/admin/products/update/{{this._id}}" class="btn btn-info">Edit</a> <a href="/admin/products/delete/{{this._id}}" class="btn btn-warning">Delete</a> </td>
+    </tr>
+    {{/each}}
+    </tbody>
+    </table>
+</div>
+
+
+
+
+<div class="wrap-footer">
+    <footer class=" text-lg-start">
+    <!-- Grid container -->
+    <div class="container p-5">
+        <!--Grid row-->
+        <div class="row">
+        <!--Grid column-->
+        <div class="col wrap-link">
+            <h5 class="text-uppercase">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/2/24/LEGO_logo.svg" alt="" style="width: 100px; height: 100px;">
+            </h5>
+            <a href="" class="link-location-footer">
+                <div class="location-footer">
+                    <i class="fa-solid fa-location-dot"></i> 
+                    
+                    <span>NoWhere</span>
+
+                </div>
+            </a>
+
+            <div class="list-link-footer">
+                <ul class="list-link">
+                    <li class="link-item-footer">
+                        <a href="">Gift Cards</a>
+                    </li>
+                    <li class="link-item-footer">
+                        <a href="">Lego Catalogs</a>
+                    </li>
+                    <li class="link-item-footer">
+                        <a href="">Find a LEGO store</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--Grid column-->
+
+        <div class="col wrap-link">
+            <span class="text-uppercase head-link-footer-card">
+                ABOUT US
+            </span>
+
+            <div class="list-link-footer">
+                <ul class="list-link">
+                    <li class="link-item-footer">
+                        <a href="">About the LEGO Group</a>
+                    </li>
+                    <li class="link-item-footer">
+                        <a href="">LEGO® News</a>
+                    </li>
+                    <li class="link-item-footer">
+                        <a href="">Sustainability</a>
+                    </li>
+                    <li class="link-item-footer">
+                        <a href="">Supply Chain Transparency Statement</a>
+                    </li>
+                    <li class="link-item-footer">
+                        <a href="">LEGO Product Certification</a>
+                    </li>
+                    <li class="link-item-footer">
+                        <a href="">LEGO Jobs</a>
+                    </li>
+                    <li class="link-item-footer">
+                        <a href="">LEGO Compliance Line</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col wrap-link">
+            <span class="text-uppercase head-link-footer-card">
+                SUPPORT
+            </span>
+
+            <div class="list-link-footer">
+                <ul class="list-link">
+                    <li class="link-item-footer">
+                        <a href="">Contact Us</a>
+                    </li>
+                    <li class="link-item-footer">
+                        <a href="">Find Building Instructions</a>
+                    </li>
+                    <li class="link-item-footer">
+                        <a href="">Replacement Parts</a>
+                    </li>
+                    <li class="link-item-footer">
+                        <a href="">Shipping and Returns</a>
+                    </li>
+                    <li class="link-item-footer">
+                        <a href="">Payment Method</a>
+                    </li>
+                    <li class="link-item-footer">
+                        <a href="">Terms & Condition</a>
+                    </li>
+                    <li class="link-item-footer">
+                        <a href="">Product Recalls</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col wrap-link">
+            <span class="text-uppercase head-link-footer-card">
+                ATTRACTIONS
+            </span>
+
+            <div class="list-link-footer">
+                <ul class="list-link">
+                    <li class="link-item-footer">
+                        <a href="">LEGO® House</a>
+                    </li>
+                    <li class="link-item-footer">
+                        <a href="">LEGOLAND® Parks</a>
+                    </li>
+                    <li class="link-item-footer">
+                        <a href="">LEGOLAND Discovery Centers</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col wrap-link">
+            <span class="text-uppercase head-link-footer-card">
+                MORE FROM US
+            </span>
+
+            <div class="list-link-footer">
+                <ul class="list-link">
+                    <li class="link-item-footer">
+                        <a href="">LEGO® LIFE</a>
+                    </li>
+                    <li class="link-item-footer">
+                        <a href="">LEGO Education</a>
+                    </li>
+                    <li class="link-item-footer">
+                        <a href="">LEGO Ideas</a>
+                    </li>
+                    <li class="link-item-footer">
+                        <a href="">LEGO Foundation</a>
+                    </li>
+                    <li class="link-item-footer">
+                        <a href="">Affiliate Program</a>
+                    </li>
+                    <li class="link-item-footer">
+                        <a href="">Student Offers</a>
+                    </li>
+                    <li class="link-item-footer">
+                        <a href="">LEGO® Braille Bricks</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--Grid column-->
+        </div>
+        <!--Grid row-->
+    </div>
+    <div class="container p-5">
+        <div class="wrap-contact">
+            <div class="form-contact">
+                <span class="head-form-contact">SUBSCRIBE TO LEGO® SHOP EMAILS</span>
+                <form action="">
+                    <input type="text" placeholder="Your email address">
+                    <span class="angel-right"><i class="fa-solid fa-angle-right"></i></span>
+                </form>
+            </div>
+            <div class="social-contact">
+                <span class="head-form-contact">FOLLOW US</span>
+                <div class="list-social-contact-icon">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container p-5">
+        <div class="wrap-last-footer">
+            <div class="wrap-list-link-lience">
+                <a href="" class="link-lience">Privacy Policy</a>
+                <a href="" class="link-lience">Cookies</a>
+                <a href="" class="link-lience">Legal Notice</a>
+                <a href="" class="link-lience">Terms of Use</a>
+                <a href="" class="link-lience">Digital Wellbeing</a>
+                <a href="" class="link-lience">Accessibility</a>
+                <a href="" class="link-lience">Cookie Settings</a>
+                <a href="" class="link-lience">Do Not Sell My Personal Information</a>
+
+            </div>
+            <div class="wrap-p">
+                LEGO System A/S, DK-7190 Billund, Denmark. Must be 18 years or older to purchase online. LEGO, the LEGO logo, the Minifigure, DUPLO, LEGENDS OF CHIMA, NINJAGO, BIONICLE, MINDSTORMS and MIXELS are trademarks and copyrights of the LEGO Group. ©2022 The LEGO Group. All rights reserved. Use of this site signifies your agreement to the terms of use.
+            </div>
+        </div>
+    </div>
+
+    <!-- Grid container -->
+
+    </footer>
+</div>
+
+</body>
+</html>

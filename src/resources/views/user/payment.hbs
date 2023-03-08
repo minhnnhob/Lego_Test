@@ -1,0 +1,58 @@
+<div class="payment">
+    <div class="container">
+        <span class="my-bag-header">Payment </span>
+        <div class="wrap-cart grid_row">
+            <div class="my-bag">
+                <div class="payment">
+                    <span class="payment-header">Enter shipping details</span>
+                    <div class="payment-form">
+                        <form action="/cart/payment/acceptPayment" method="post">
+                            <div class="two-input">
+                                <input type="text" name="customername" id="" placeholder="Enter your full-name" required maxlength="20" minlength="5">
+                                <input type="text" name="phonenumber" id="" placeholder="Enter your phone number" required>
+                            </div>
+                            <div class="two-input">
+                                <input type="email" name="email" id="" placeholder="Enter your email" required>
+                                <input type="text" name="paymentmethod" id="" value="Only payment by Cash" disabled>
+                            </div>
+                            <div class="text-area">
+                                <textarea name="address" id="" rows="5" placeholder="Enter your address" class="address-textarea" required></textarea>
+                                <span class="order-purpose">We'll use this information to send you a receipt and keep you posted on the status of your order.</span>
+                            </div>
+                            <div class="payment-accept two-input">
+                                <input type="submit" value="Payment">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="payment-confirm">
+                <span class="order-summary-header">Order Summary</span>
+                <div class="order-total-summary">
+                    <span class="order-total-header">Order Total</span>
+                    <span class="order-total">${{total}}</span>
+                </div>
+                <div class="orderdetail">
+                    <span class="orderdetail-header">Order Detail</span>
+                    {{#each carts}}
+                    <div class="orderdetail-product grid_row">
+                        <div class="orderdetail-product-img">
+                            <img src="/img/products/{{this.product.img1}}" alt="" srcset="">
+                        </div>
+                        <div class="orderdetail-product-infor">
+                            <span class="orderdetail-product-name">
+                                {{this.product.name}}
+                            </span>
+                            <div class="orderdetail-product-price-qty">
+                                <span class="orderdetail-product-price">${{this.product.price}}</span>
+                                <span class="orderdetail-product-quantity">Qty: {{this.quantity}}</span>
+                            </div>
+                        </div>
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

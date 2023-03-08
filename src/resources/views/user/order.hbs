@@ -1,0 +1,53 @@
+<div class="container-fluid">
+
+    <div class="link-product">
+        <a href="/" class="link-to-item">Home</a>
+        <i class="fa-solid fa-angle-right"></i>
+        <a href="/" class="link-to-item">Account Overview</a>
+    </div>
+    <div class="row">
+        <div class="col-3 mb-5 pb-5" style="margin-left: 15px;">
+            <div class="list-group " id="list-tab" role="tablist">
+            <a class="rounded-0 list-group-item list-group-item-action"  href="/detail" >Personal and Address Details</a>
+            <a class="rounded-0 list-group-item list-group-item-action active" id="list-profile-list"  href="/orderDetail" >My Orders</a>
+             <a class="rounded-0 list-group-item list-group-item-action"  href="/changePassword" >Change Password</a>
+            <a class="rounded-0 list-group-item list-group-item-action" href="/logout" role="tab" >Lougout</a>
+            </div>
+        </div>
+        {{!--  --}}
+    
+            <div class="my-bag col-6  ">
+            {{#each orderdetails}}
+                     <div class="my-bag-list">
+                        
+                            <div class="my-bag-item">
+                                <div class="my-bag-item-img">
+                                    <img src="/img/products/{{this.product.img1}}" alt="" class="s">
+                                </div>
+                                <div class="my-bag-infor">
+                                    <a href="/product/{{this.product.slug}}" class="my-bag-item-product-name">{{this.product.name}}</a>
+                                    <span class="my-bag-item-product-price">${{this.product.price}}</span>
+                                    {{!-- <input type="hidden" name="_id" value="{{this._id}}" id="id_{{@index}}">
+                                    <input type="hidden" name="product" value="{{this.product._id}}">
+                                    <input type="number" name="quantity" value="{{this.quantity}}" class="float-right d-flex justify-content-end " style="margin-left: 20px;"> --}}
+                                </div>
+                                         
+                            </div>
+                        
+                </div>
+            {{/each}}
+           
+        {{!--  --}}
+       </div>
+         <div class="payment-confirm col-2">
+                <span class="order-summary-header">Order Summary</span>
+                <div class="order-total-summary">
+                    <span class="order-total-header">Order Total</span>
+                    <span class="order-total">${{total}}</span>
+                </div>
+                <a href="/orderDetail"><i class="fa-solid"></i>Back to orders</a>
+            </div>
+       
+      </div>
+    
+</div>

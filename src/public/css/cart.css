@@ -1,0 +1,125 @@
+.cart{
+    background-color: rgb(248, 248, 248);
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+.wrap-cart{
+    margin-top: 10px;
+}
+.my-bag{
+    width: 65%;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+.my-bag-header{
+    font-size: 25px;
+    font-weight: 400;   
+}
+.my-bag-item{
+    display: flex;
+    width: 100%;
+}
+.my-bag-item-img{
+    width: 20%;
+}
+.my-bag-item-img>img{
+    display: block;
+    margin: 0 auto;
+    width: 120px;
+    object-fit: contain;
+}
+.my-bag-infor{
+    width: 65%;
+    padding: 10px 0px
+}
+.my-bag-infor>a{
+    color: black;
+    font-weight: 600;
+}
+.my-bag-item-product-price{
+    font-weight: 600;
+    font-size: 20px;
+}
+.my-bag-menu{
+    width: 15%;
+    padding: 10px 0px;
+    margin-right: 20px;
+    
+}
+.my-bag-menu>a{
+text-decoration: none;
+}
+.my-bag-menu>a:hover{
+    color: black;
+}
+.my-bag-item-product-name{
+    display: block;
+    margin-bottom: 30px;
+}
+.my-bag-item-product-price{
+    margin-right: 100px;
+}
+.update-btn,
+.delete-btn{
+    background-color: rgb(255, 113, 113);
+    cursor: pointer;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    margin-bottom: 15px;
+    display: block;
+}
+.update-btn{
+    background-color: rgb(120, 212, 92);
+}
+.my-bag-list{
+    padding-bottom: 5px;
+    border-bottom: 1px solid #ccc;
+    padding-top: 15px;
+}
+.payment-confirm{
+    width: 30%;
+    background-color: white;
+    margin-left: 25px;
+    padding-top: 10px;
+    padding-right: 35px;
+}
+.order-summary-header{
+    font-size: 20px;
+    font-weight: 600;
+    padding-left: 15px;
+}
+.order-total-summary,
+.payment-confirm>a{
+    padding-left: 15px;
+}
+.order-total-summary{
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    margin-top: 25px;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.payment-confirm>a{
+    color: black;
+    text-decoration: none;
+    background-color: rgb(253, 128, 36);
+    width: 100%;
+    display: block;
+    margin-left: 15px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+}
+.payment-confirm>a>i{
+    margin-right: 5px;
+}
+.recommend-at-cart{
+    padding-top: 15px;
+}

@@ -1,0 +1,37 @@
+{
+  "name": "lego-project",
+  "version": "1.0.0",
+  "description": "lego",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "nodemon --inspect src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Thainqgch210478/Lego-System.git"
+  },
+  "keywords": [
+    "lego"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Thainqgch210478/Lego-System/issues"
+  },
+  "homepage": "https://github.com/Thainqgch210478/Lego-System#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.6",
+    "express": "^4.18.2",
+    "express-handlebars": "^6.0.7",
+    "method-override": "^3.0.0",
+    "mongodb": "^5.0.1",
+    "mongoose": "^6.10.0",
+    "mongoose-slug-generator": "^1.0.4"
+  },
+  "devDependencies": {
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.20"
+  }
+}

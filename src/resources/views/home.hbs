@@ -1,0 +1,215 @@
+<div class="container">
+    <div class="slider">
+        <div class="wrap-slider">
+            <img src="/img/slider.png" alt="" srcset="">
+        </div>
+        <div class="wrap-slider-content">
+            <img src="/img/ideas_logo_pos_300w.png" alt="">
+            <div class="slider-content">
+                <div class="slider-header">Pre-order a beautiful LEGO® Icons Botanical display</div>
+                <div class="slider-des">Reserve the new Wildflower Bouquet set today.</div>
+                <a href="" class="link-slider">Shop Now<i class="fa-solid fa-angle-right"></i></a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="category">
+        <div class="wrap-category">
+            <div class="category-item">
+                <a href=""><img src="/img/Categories/News.png" alt="" srcset=""></a>
+                
+                <div class="category-header">
+                    <a href="" class="">News</a>
+                </div>
+            </div>
+            <div class="category-item">
+                <a href=""><img src="/img/Categories/Exclusives.png" alt="" srcset=""></a>
+                <div class="category-header">
+                    <a href="" class="">Exclusives</a>
+                </div>
+            </div>
+            <div class="category-item">
+                <a href=""><img src="/img/Categories/Offers.png" alt="" srcset=""></a>
+                <div class="category-header">
+                    <a href="" class="">Offers</a>
+                </div>
+            </div>
+            <div class="category-item">
+                <a href=""><img src="/img/Categories/best-sellers.png" alt="" srcset=""></a>
+                <div class="category-header">
+                    <a href="" class="">Lunar New Year</a>
+                </div>
+            </div>
+            <div class="category-item">
+                <a href=""><img src="/img/Categories/friends.png" alt="" srcset=""></a>
+                <div class="category-header">
+                    <a href="" class="">Star Wars</a>
+                </div>
+            </div>
+            <div class="category-item">
+                <a href=""><img src="/img/Categories/Technic.png" alt="" srcset=""></a>
+                <div class="category-header">
+                    <a href="" class="">Star Wars™</a>
+                </div>
+            </div>
+            <div class="category-item">
+                <a href=""><img src="/img/Categories/Ideas.png" alt="" srcset=""></a>
+                <div class="category-header">
+                    <a href="" class="">FREE kids magazine</a>
+                </div>
+            </div>
+            <div class="category-item">
+                <a href=""><img src="/img/Categories/Vip.png" alt="" srcset=""></a>
+                <div class="category-header">
+                    <a href="" class="">VIP</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="recommend">
+        <span class="rcmd-header">Recommended For You</span>
+        <div class="wrap-list-product-recommended grid_row">
+            {{#each products}}
+            <div class="product-item">
+                <a href="/product/{{this.slug}}">
+                    <img src="/img/products/{{this.img1}}" alt="">
+                </a>
+                <div class="product-des">
+                    <div class="product-name">
+                        <a href="/product/{{this.slug}}">{{this.name}}</a>
+                    </div>
+                    <div class="product-price">
+                        ${{this.price}}
+                    </div>
+                    <a href="/product/{{this.slug}}" class="link-product">
+                        <div class="watch-product">View Product</div>
+                    </a>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+
+    <div class="help">
+        <img src="https://www.lego.com/_next/static/images/cookieguy-a8400ece3d416842cb83d9f1efc22662.png" alt="">
+        <div class="help-content">
+            <h5 class="help-header">Help us build the most awesome personalized experience for you</h5>
+            <div class="help-des">
+                <span class="help-detail">Help us build the most awesome personalized experience for you! Give us your permission to use site cookies and we’ll create you an experience you’re sure to love!</span>
+                <div class="help-link"></div>
+            </div>
+        </div>
+        <img src="https://www.lego.com/_next/static/images/cookies-afb23abdf31dc35a6f446c474ef33678.png" alt="">
+    </div>
+
+    <div class="recommend">
+        <span class="rcmd-header">Trending Now</span>
+        <div class="wrap-list-product-recommended grid_row">
+            <div class="product-item trend-img">
+                <a href="">
+                    <img src="https://www.lego.com/cdn/cs/set/assets/blta4ea2827437995e9/05-10297-Palm-Homepage-202201-Block-Standard-Environment-2.jpg?fit=crop&format=webply&quality=80&width=635&height=440&dpr=1" alt="">
+                </a>
+                <div class="trend-des">
+                    <div class="trend-name">LEGO® Boutique Hotel</div>
+                    <div class="trend-des">Check in to the most glamorous Modular Buildings set yet.</div>
+                </div>
+            </div>
+
+            <div class="product-item trend-img">
+                <a href="">
+                    <img src="https://www.lego.com/cdn/cs/set/assets/blt0d8517b90decf26c/42141-T3-202203-PS-Block-Standard.jpg?fit=crop&format=webply&quality=80&width=635&height=440&dpr=1" alt="">
+                </a>
+                <div class="trend-des">
+                    <div class="trend-name">Fuel your passion</div>
+                    <div class="trend-des">Build and display the LEGO® Technic™ McLaren Formula 1™ Race Car.</div>
+                </div>
+            </div>
+
+            <div class="product-item trend-img">
+                <a href="">
+                    <img src="https://www.lego.com/cdn/cs/set/assets/blt2aba74574425652b/75328-T1-202203-PS-Block-Standard.jpg?fit=crop&format=webply&quality=80&width=635&height=440&dpr=1" alt="">
+                </a>
+                <div class="trend-des">
+                    <div class="trend-name">Capture your bounty</div>
+                    <div class="trend-des">Galactic adventure awaits with new LEGO® Star Wars™ helmets.</div>
+                </div>
+            </div>
+
+            <div class="product-item trend-img">
+                <a href="">
+                    <img src="https://www.lego.com/cdn/cs/set/assets/blt01ee9b625a3ff4cc/10313-T1-202302-SL-Block-Standard.jpg?fit=crop&format=webply&quality=80&width=635&height=440&dpr=1" alt="">
+                </a>
+                <div class="trend-des">
+                    <div class="trend-name">Go wild</div>
+                    <div class="trend-desc">Let your creativity bloom with the new Wildflower Bouquet.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="the-lastest">
+        <span class="rcmd-header">The Lastest</span>
+        <div class="wrap-the-lastest grid_row">
+            <div class="lastest-item">
+                <img src="https://www.lego.com/cdn/cs/set/assets/blte144672af9966751/10307-Exclusive-202211-SL-Block-Mixed-Large.jpg?fit=crop&format=webply&quality=80&width=650&height=720&dpr=1" alt="" srcset="">
+                <div class="lastest-item-content">
+                    <span class="lastest-item-header">From Paris with love</span>
+                    <p class="lastest-item-desc">Build a tribute to the city of lights with the new Eiffel tower.</p>
+                </div>
+            </div>
+            <div class="lastest-item">
+                <img src="https://www.lego.com/cdn/cs/set/assets/bltc817b10b6f19d7f5/21336-T1-202210-SL-Block-Mixed-Large.jpg?fit=crop&format=webply&quality=80&width=650&height=720&dpr=1" alt="" srcset="">
+                <div class="lastest-item-content">
+                    <span class="lastest-item-header white">Return to Dunder Mifflin</span>
+                    <p class="lastest-item-desc white">Recreate your favorite episodes with new LEGO® Ideas The Office.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div class="recommend">
+        <span class="rcmd-header">Read All About It</span>
+        <div class="wrap-list-product-recommended grid_row">
+            <div class="product-item trend-img">
+                <a href="">
+                    <img src="https://www.lego.com/cdn/cs/set/assets/bltfe3c8102745be84c/02-CardContent-Botanicals-Article-01.jpg?fit=crop&format=webply&quality=80&width=635&height=440&dpr=1" alt="">
+                </a>
+                <div class="trend-des">
+                    <div class="trend-name">How to arrange your LEGO® flowers</div>
+                    <div class="trend-des">Take some tips on creating beautiful floral arrangements for your home by combining LEGO® Botanicals sets...</div>
+                </div>
+            </div>
+
+            <div class="product-item trend-img">
+                <a href="">
+                    <img src="https://www.lego.com/cdn/cs/set/assets/blt13137723c77a47e2/HERO_image.jpg?fit=crop&format=webply&quality=80&width=635&height=440&dpr=1" alt="">
+                </a>
+                <div class="trend-des">
+                    <div class="trend-name">How to make a LEGO® brick stop motion video</div>
+                    <div class="trend-des">Discover how to make a LEGO® brick stop-motion video with these top tips shared from a professional animator! Grab your bricks and cameras...</div>
+                </div>
+            </div>
+
+            <div class="product-item trend-img">
+                <a href="">
+                    <img src="https://www.lego.com/cdn/cs/set/assets/blt9d53529a6ab9b5fc/HERO_-_Mobile.jpg?fit=crop&format=webply&quality=80&width=635&height=440&dpr=1" alt="">
+                </a>
+                <div class="trend-des">
+                    <div class="trend-name">Best STEM toys for kids</div>
+                    <div class="trend-des">Our STEM toys are specially designed to provide endless play possibilities, building challenges and activities for kids with the interest in STEM today!</div>
+                </div>
+            </div>
+
+            <div class="product-item trend-img">
+                <a href="">
+                    <img src="https://www.lego.com/cdn/cs/set/assets/blt335dfa76d488e898/OG.jpg?fit=crop&format=webply&quality=80&width=635&height=440&dpr=1" alt="">
+                </a>
+                <div class="trend-des">
+                    <div class="trend-name">Best Educational Toys for 5-Year-Olds</div>
+                    <div class="trend-desc">Our educational toys are specially designed to help improve social awareness and fine-tune motor skills in 5-year-olds all while being creative builders.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

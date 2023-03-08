@@ -1,0 +1,27 @@
+.header{
+    background-color: rgb(255, 207, 0);
+}
+.link-header{
+    margin-right: 15px;
+    margin-left: 15px;
+}
+.link-header:hover{
+    text-decoration: 3px underline;
+}
+.link-header>a{
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+}
+.cart-icon{
+    margin: 0 25px;
+}
+.icon-header{
+    font-size: 23px;
+    color: black;
+}
+.container_new{
+    width: 1350px;
+    max-width: 100%;
+    margin: 0 auto;
+}

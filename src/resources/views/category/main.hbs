@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container mt-3">
+            <form class="form-inline my-2 my-lg-0" method="GET">
+                <input class="form-control mr-sm-2" name="s" type="search" placeholder="Search" value="{{search.s}}">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        <br>
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th class="h1 text-center" colspan="3">Category List</th>
+                    <th>
+                        <div class="text-right">
+                            <a type="button" class="btn btn-primary" href="/admin/category/add">Add Category</a>
+                        </div>
+                    </th>
+                </tr>
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Img</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each categories}}
+                <tr>
+                    <td>
+                        {{this.name}}
+                    </td>
+                    <td>
+                        {{this.description}}
+                    </td>
+                    <td>
+                        <img class="img-thumbnail" alt="Cinque Terre" src="/img/Categories/{{this.img}}" alt=""
+                            width="110" height="100">
+                    </td>
+                    <td class="text-right">
+                        <a class="btn btn-primary" href="/admin/category/edit/{{this._id}}">Edit</a>
+                        <a class="btn btn-danger" href="/admin/category/delete/{{this._id}}"
+                            onclick="return confirm('Are u sure?')">Delete</a>
+                    </td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

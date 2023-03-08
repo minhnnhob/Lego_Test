@@ -1,0 +1,72 @@
+<div class="container-fluid">
+
+    <div class="link-product">
+        <a href="/" class="link-to-item">Home</a>
+        <i class="fa-solid fa-angle-right"></i>
+        <a href="/" class="link-to-item">Account Overview</a>
+    </div>
+    <div class="row">
+        <div class="col-3 mb-5 pb-5" style="margin-left: 15px;">
+            <div class="list-group " id="list-tab" role="tablist">
+            <a class="rounded-0 list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="/detail" >Personal and Address Details</a>
+            <a class="rounded-0 list-group-item list-group-item-action" id="list-profile-list"  href="/orderDetail" >My Orders</a>
+             <a class="rounded-0 list-group-item list-group-item-action"  href="/changePassword" >Change Password</a>
+            <a class="rounded-0 list-group-item list-group-item-action" href="/logout" role="tab" >Lougout</a>
+            </div>
+        </div>
+        <div class="col-8">
+          <div class="card mb-3 rounded-0">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Full Name</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      {{user.name}}
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Email</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      {{user.email}}
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Phone</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      {{user.phonenumber}}
+                    </div>
+                  </div>
+                  <hr>                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Date of birth</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      {{user.dob}}
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Country</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      {{user.address}}
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <a class="btn btn-primary " href="/editInfor">Edit</a>
+                    </div>
+                  </div>
+                </div>
+        </div>
+    </div>
+</div>

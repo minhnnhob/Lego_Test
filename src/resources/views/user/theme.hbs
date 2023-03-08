@@ -1,0 +1,135 @@
+<div class="container">
+    <div class="link-product">
+        <a href="/" class="link-to-item">Home</a>
+        <i class="fa-solid fa-angle-right"></i>
+        <a href="/" class="link-to-item">Shop</a>
+        <i class="fa-solid fa-angle-right"></i>
+        <a href="/" class="link-to-item">{{product.category.name}}</a>
+        <i class="fa-solid fa-angle-right"></i>
+        <a href="/" class="link-to-item">{{product.theme.name}}</a>
+        <i class="fa-solid fa-angle-right"></i>
+        <span class="product-head-name">Money Tree</span>
+    </div>
+    <div class="product-information grid_row">
+        <div class="product-infor-img">
+            <div class="img-list-update">
+                        <img
+                            src="/img/products/{{product.img1}}"
+                            alt=""
+                            onclick="currentSlide(1);"
+                        />
+                        <img
+                            src="/img/products/{{product.img2}}"
+                            alt=""
+                            onclick="currentSlide(2);"
+                        />
+                        <img
+                            src="/img/products/{{product.img3}}"
+                            alt=""
+                            onclick="currentSlide(3)"
+                        />
+            </div>
+            <div class="contain_img-list">
+                        <img
+                        src="/img/products/{{product.img1}}"
+                        alt=""
+                        class="product-panel-intro-feature img-change"
+                        />
+                        <img
+                        src="/img/products/{{product.img2}}"
+                        alt=""
+                        class="product-panel-intro-feature img-change"
+                        />
+                        <img
+                        src="/img/products/{{product.img3}}"
+                        alt=""
+                        class="product-panel-intro-feature img-change"
+                        />
+            </div>
+        </div>
+        <div class="product-infor-content">
+            <form action="/product/addToBag" method="post">
+                <div class="product-new">
+                    <span class="new-item">New</span>
+                    <span class="product-message"></span>
+                </div>
+                <div class="product-content">
+                    <span class="product-header-name">{{product.name}}</span>
+                    <input type="hidden" name="product" value="{{product._id}}">
+                    <input type="hidden" name="slug" value="{{product.slug}}">
+                    <input type="hidden" name="currentQuantity" value="{{product.quantity}}">
+                    <span class="product-price">${{product.price}}</span>
+                    
+                    <input type="number" name="quantity" id="" class="input-number" value="1">
+                    <span class="product-quantity">Quantity: {{product.quantity}}</span>
+                </div>
+                
+                <input type="submit" value="Add To Bag" class="add-to-bag-button">
+                {{#if messageSuccess}}
+                <div class="alert alert-success alert-dismissible fade show">
+                    <strong>Success!</strong> Your message has been sent successfully.
+                    <button type="button" class="btn-close" data-bs-dismiss="alert">X</button>
+                </div>
+                {{/if}}
+                {{#if messageFailed}}
+                <div class="alert alert-warning alert-dismissible fade show">
+                    <strong>Warning!</strong> There was a problem with your network connection.
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                </div>
+                {{/if}}
+            </form>
+
+        </div>
+    </div>
+    <div class="help">
+        <img src="https://www.lego.com/_next/static/images/cookieguy-a8400ece3d416842cb83d9f1efc22662.png" alt="">
+        <div class="help-content">
+            <h5 class="help-header">Help us build the most awesome personalized experience for you</h5>
+            <div class="help-des">
+                <span class="help-detail">Help us build the most awesome personalized experience for you! Give us your permission to use site cookies and we’ll create you an experience you’re sure to love!</span>
+                <div class="help-link"></div>
+            </div>
+        </div>
+        <img src="https://www.lego.com/_next/static/images/cookies-afb23abdf31dc35a6f446c474ef33678.png" alt="">
+    </div>
+
+    <div class="recommend">
+        <span class="rcmd-header">Recommended For You</span>
+        <div class="wrap-list-product-recommended grid_row">
+            {{#each products}}
+            <div class="product-item">
+                <a href="/product/{{this.slug}}">
+                    <img src="/img/products/{{this.img1}}" alt="">
+                </a>
+                <div class="product-des">
+                    <div class="product-name">
+                        <a href="/product/{{this.slug}}">{{this.name}}</a>
+                    </div>
+                    <div class="product-price">
+                        ${{this.price}}
+                    </div>
+                    <a href="/product/{{this.slug}}" class="link-product">
+                        <div class="watch-product">View Product</div>
+                    </a>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);//call this function to make none all img and just show the img at the slideIndex = 1 ~ the first picture with index = 0
+        function currentSlide(n) {//function to hear on click event 
+            showSlides((slideIndex = n));
+        }
+        function showSlides(n) {//function use to make none all the img at first and just make block for the item has onclick event
+            let i;
+            let slides = document.getElementsByClassName("img-change");
+
+            for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+            }
+            slides[slideIndex - 1].style.display = "block";
+        }
+    </script>
+</div>

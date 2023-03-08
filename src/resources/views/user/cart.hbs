@@ -1,0 +1,104 @@
+<div class="cart">
+    <div class="container">
+        <span class="my-bag-header">My Bag (1)</span>
+        <div class="wrap-cart grid_row">
+            <div class="my-bag">
+            {{#each carts}}
+                <div class="my-bag-list">
+                        <form action="" method="POST" id="{{@index}}">
+                            <div class="my-bag-item">
+                                <div class="my-bag-item-img">
+                                    <img src="/img/products/{{this.product.img1}}" alt="" class="s">
+                                </div>
+                                <div class="my-bag-infor">
+                                    <a href="/product/{{this.product.slug}}" class="my-bag-item-product-name">{{this.product.name}}</a>
+                                    <span class="my-bag-item-product-price">${{this.product.price}}</span>
+                                    <input type="hidden" name="_id" value="{{this._id}}" id="id_{{@index}}">
+                                    <input type="hidden" name="product" value="{{this.product._id}}">
+                                    <input type="number" name="quantity" value="{{this.quantity}}">
+                                </div>
+                                <div class="my-bag-menu">
+                                    <span class="delete-btn" onclick="deleteItem({{@index}})">Delete</span>
+                                    <span class="update-btn" onclick="updateItem({{@index}})">Update</span>
+                                </div> 
+                            </div>
+                        </form>
+                </div>
+            {{/each}}
+            </div>
+            
+            <div class="payment-confirm">
+                <span class="order-summary-header">Order Summary</span>
+                <div class="order-total-summary">
+                    <span class="order-total-header">Order Total</span>
+                    <span class="order-total">${{total}}</span>
+                </div>
+                <a href="cart/payment"><i class="fa-solid fa-shield-halved"></i>Checkout Securely</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="recommend-at-cart">
+    <div class="container">
+        <div class="recommend">
+            <span class="rcmd-header">Recommended For You</span>
+            <div class="wrap-list-product-recommended grid_row">
+            {{#each carts}}
+                <div class="product-item">
+                    <a href="/product/{{this.product.slug}}">
+                        <img src="/img/products/{{this.product.img1}}" alt="">
+                    </a>
+                    <div class="product-des">
+                        <div class="product-name">
+                            <a href="/product/{{this.product.slug}}">{{this.product.name}}</a>
+                        </div>
+                        <div class="product-price">
+                            ${{this.product.price}}
+                        </div>
+                        <a href="/product/{{this.product.slug}}" class="link-product">
+                            <div class="watch-product">View Product</div>
+                        </a>
+                    </div>
+                </div>
+            {{/each}}
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+        <div class="help">
+            <img src="https://www.lego.com/_next/static/images/cookieguy-a8400ece3d416842cb83d9f1efc22662.png" alt="">
+            <div class="help-content">
+                <h5 class="help-header">Help us build the most awesome personalized experience for you</h5>
+                <div class="help-des">
+                    <span class="help-detail">Help us build the most awesome personalized experience for you! Give us your permission to use site cookies and we’ll create you an experience you’re sure to love!</span>
+                    <div class="help-link"></div>
+                </div>
+            </div>
+            <img src="https://www.lego.com/_next/static/images/cookies-afb23abdf31dc35a6f446c474ef33678.png" alt="">
+        </div>
+</div>
+<script>
+    function deleteItem(index) {
+        var result = confirm("Do you want to delete?");
+        if(result == true){
+            var productid = document.getElementById("id_"+index).value;
+            document.getElementById(index).action = '/cart/delete/';
+            var x = document.getElementById(index).action;
+            
+            console.log(x);
+            document.getElementById(index).submit();
+        }
+    }
+
+    function updateItem(index){
+        var productid = document.getElementById("id_"+index).value;//get id of cart-item where the index of form has been placed
+        document.getElementById(index).action = '/cart/update/';//set up action for form with index that is taken
+        var x = document.getElementById(index).action;
+    
+        console.log(x);
+        document.getElementById(index).submit();//submit the form that has the id equal index.
+    }
+
+
+</script>
