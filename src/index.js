@@ -10,7 +10,7 @@ const methodOverride = require('method-override');
 const cookieParser = require('cookie-parser');
 
 db.connect();
-
+mongoose.set('strictQuery', false);
 app.use(morgan('combined'));
 app.engine(
   'hbs',
@@ -37,5 +37,5 @@ route(app);
 
 
 app.listen(port, () => {
-    console.log(`App listening on port https://legos.onrender.com/`);
+    console.log(`App listening on port http://localhost:${port}`);
 })
