@@ -10,7 +10,7 @@ const methodOverride = require('method-override');
 const cookieParser = require('cookie-parser');
 
 db.connect();
-mongoose.set('strictQuery', false);
+
 app.use(morgan('combined'));
 app.engine(
   'hbs',
